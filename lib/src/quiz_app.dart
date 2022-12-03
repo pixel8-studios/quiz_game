@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/src/core/named_routes.dart';
+import 'package:quiz_app/src/core/utils/named_routes.dart';
 import 'package:quiz_app/src/view/splash/splash_view.dart';
 
 class QuizApp extends StatelessWidget {
