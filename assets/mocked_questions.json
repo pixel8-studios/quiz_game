@@ -1,0 +1,88 @@
+{
+    "questions": [
+      {
+        "question": "Quais são os três principais personagens do jogo The Legend of Zelda?",
+        "answers": [
+          "Mario, Luigi e Peach",
+          "Link, Zelda e Ganondorf",
+          "Sonic, Tails e Knuckles",
+          "Pac-Man, Ms. Pac-Man e Inky"
+        ],
+        "correctAnswer": "Link, Zelda e Ganondorf"
+      },
+      {
+        "question": "Qual é o nome do jogo em que o personagem principal é um peixe com habilidades especiais?",
+        "answers": [
+          "Angry Birds",
+          "Fishy",
+          "Finding Nemo",
+          "Aquaria"
+        ],
+        "correctAnswer": "Aquaria"
+      },
+      {
+        "question": "Qual é o nome do jogo de tiro em primeira pessoa que se passa em um mundo apocalíptico?",
+        "answers": [
+          "Call of Duty",
+          "Fallout",
+          "Borderlands",
+          "Half-Life"
+        ],
+        "correctAnswer": "Fallout"
+      },
+      {
+        "question": "Qual é o nome do personagem principal do jogo de luta Street Fighter?",
+        "answers": [
+          "Ryu",
+          "Ken",
+          "Chun-Li",
+          "Guile"
+        ],
+        "correctAnswer": "Ryu"
+      },
+      {
+        "question": "Qual é o nome do personagem principal do jogo de plataforma Super Mario Bros?",
+        "answers": [
+          "Mario",
+          "Luigi",
+          "Peach",
+          "Toad"
+        ],
+        "correctAnswer": "Mario"
+      },
+      {
+        "question": "Qual é o nome do jogo de estratégia que se passa em um mundo de fantasia?",
+        "answers": [
+          "Warcraft",
+          "Age of Empires",
+          "Civilization",
+          "Heroes of Might and Magic"
+        ],
+        "correctAnswer": "Warcraft"
+      },
+      {
+        "question": "Qual é o nome do jogo de plataforma que se passa em um mundo de fantasia e tem como personagem principal um porco?",
+        "answers": [
+          "Angry Birds",
+          "Donkey Kong",
+          "Peppa Pig",
+          "Babe: Pig in the City"
+        ],
+        "correctAnswer": "Donkey Kong"
+      },
+      {
+        "question": "Qual é o nome do jogo de tiro em terceira pessoa que se passa em um mundo de ficção científica?",
+        "answers": [
+          "Halo",
+          "Destiny",
+          "Borderlands",
+          "Half-Life"
+        ],
+        "correctAnswer": "Halo"
+      }
+    ]
+  }
+
+
+  
+  
