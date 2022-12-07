@@ -1,5 +1,4 @@
-{
-    "questions": [
+ [
       {
         "question": "Quais são os três principais personagens do jogo The Legend of Zelda?",
         "answers": [
@@ -81,7 +80,7 @@
         "correctAnswer": "Halo"
       }
     ]
-  }
+  
 
 
   
