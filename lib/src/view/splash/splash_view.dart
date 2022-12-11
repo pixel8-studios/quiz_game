@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/src/core/utils/named_routes.dart';
 
 class SplashView extends StatefulWidget {
+  const SplashView({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _SplashViewState createState() => _SplashViewState();
 }
 

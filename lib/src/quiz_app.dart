@@ -4,7 +4,6 @@ import 'package:quiz_app/src/view/home/home_view.dart';
 import 'package:quiz_app/src/view/login/login_view.dart';
 import 'package:quiz_app/src/view/splash/splash_view.dart';
 
-
 import 'core/utils/named_routes.dart';
 
 class QuizApp extends StatelessWidget {
@@ -17,7 +16,7 @@ class QuizApp extends StatelessWidget {
       theme: myTheme,
       initialRoute: NamedRoutes.SPLASH_VIEW,
       routes: {
-        NamedRoutes.SPLASH_VIEW: (_) =>  SplashView(),
+        NamedRoutes.SPLASH_VIEW: (_) => const SplashView(),
         NamedRoutes.LOGIN_VIEW: (_) => const LoginView(),
         NamedRoutes.HOME_VIEW: (_) => const HomeView(),
       },
