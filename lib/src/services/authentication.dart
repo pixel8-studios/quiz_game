@@ -1,10 +1,14 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class Authentication {
-  static Future<User?> signInWithGoogle({required BuildContext context}) async {
+  static Future<User?> signInWithGoogle(
+      {required BuildContext context}) async {
+    final navigator = ScaffoldMessenger.of(context);
     FirebaseAuth auth = FirebaseAuth.instance;
     User? user;
 
@@ -17,7 +21,8 @@ class Authentication {
 
         user = userCredential.user;
       } catch (e) {
-        print(e);
+        log('Erro ao acessar credencial de usuário', error: e);
+        throw Exception('Erro ao acessar credencial de usuário');
       }
     } else {
       final GoogleSignIn googleSignIn = GoogleSignIn();
@@ -37,34 +42,31 @@ class Authentication {
         try {
           final UserCredential userCredential =
               await auth.signInWithCredential(credential);
-
           user = userCredential.user;
         } on FirebaseAuthException catch (e) {
           if (e.code == 'account-exists-with-different-credential') {
-            ScaffoldMessenger.of(context).showSnackBar(
+            navigator.showSnackBar(
               Authentication.customSnackBar(
-                content:
-                    'The account already exists with a different credential',
+                content: 'Conta já registrada',
               ),
             );
           } else if (e.code == 'invalid-credential') {
-            ScaffoldMessenger.of(context).showSnackBar(
+            navigator.showSnackBar(
               Authentication.customSnackBar(
-                content:
-                    'Error occurred while accessing credentials. Try again.',
+                content: 'Login inválido. Tente novamente.',
               ),
             );
           }
         } catch (e) {
-          ScaffoldMessenger.of(context).showSnackBar(
+          navigator.showSnackBar(
             Authentication.customSnackBar(
-              content: 'Error occurred using Google Sign In. Try again.',
+              content: 'Erro ao acessar a conta. Tente novamente.',
             ),
           );
         }
       }
     }
-
+    
     return user;
   }
 
@@ -79,7 +81,7 @@ class Authentication {
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         Authentication.customSnackBar(
-          content: 'Error signing out. Try again.',
+          content: 'Erro ao sair. Tente novamente.',
         ),
       );
     }
