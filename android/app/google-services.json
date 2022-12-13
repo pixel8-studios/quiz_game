@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "636841730572",
+    "project_id": "quiz-app-ximionilabs",
+    "storage_bucket": "quiz-app-ximionilabs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636841730572:android:cccee7e3093d7feebd4429",
+        "android_client_info": {
+          "package_name": "br.com.ximionilabs.quiz_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636841730572-b0ulf7gh0vrh9n6jlo1knmpk9o4am53s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATaN9lhPzDkJ3NjCVsxfPnJu6U0z-Ekto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636841730572-b0ulf7gh0vrh9n6jlo1knmpk9o4am53s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

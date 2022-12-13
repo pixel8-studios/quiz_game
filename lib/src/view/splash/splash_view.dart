@@ -23,7 +23,7 @@ class _SplashViewState extends State<SplashView>
 
     _animation.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        Navigator.of(context).pushReplacementNamed(NamedRoutes.LOGIN_VIEW);
+        Navigator.of(context).pushReplacementNamed(NamedRoutes.AUTH_CHECK);
       }
     });
 
@@ -45,7 +45,7 @@ class _SplashViewState extends State<SplashView>
         body: Center(
             child: Image.asset(
           'assets/images/ximioni_logo.png',
-          height: MediaQuery.of(context).size.height * .5,
+          height: MediaQuery.of(context).size.height * .4,
         )),
       ),
     );

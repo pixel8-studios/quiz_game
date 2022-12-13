@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/src/services/authentication.dart';
 
 import '../../core/components/custom_google_button.dart';
 import '../../core/components/logo_presentation.dart';
@@ -29,7 +30,9 @@ class _LoginViewState extends State<LoginView> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    CustomGoogleButton(onPressed: () {}),
+                    CustomGoogleButton(onPressed: () {
+                      return Authentication.signInWithGoogle(context: context);
+                    }),
                     const SocialMediaButtons(),
                   ],
                 ),
