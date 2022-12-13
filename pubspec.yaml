@@ -41,6 +41,9 @@ dependencies:
       git:
         url: https://github.com/nrubin29/social_media_buttons
         ref: null-safety
+  firebase_core: ^2.4.0
+  firebase_auth: ^4.2.0
+  google_sign_in: ^5.4.2
 
 dev_dependencies:
   flutter_test:
