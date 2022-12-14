@@ -6,11 +6,13 @@ class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _HomeViewState createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {
-  //String? user = FirebaseAuth.instance.currentUser!.email ?? FirebaseAuth.instance.currentUser!.displayName;
+  final user = FirebaseAuth.instance.currentUser;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +21,30 @@ class _HomeViewState extends State<HomeView> {
         width: MediaQuery.of(context).size.width,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
+            user!.photoURL != null
+                ? ClipOval(
+                    child: Material(
+                      color: Colors.grey.shade300,
+                      child: Image.network(
+                        user!.photoURL!,
+                        fit: BoxFit.fitHeight,
+                      ),
+                    ),
+                  )
+                : ClipOval(
+                    child: Material(
+                      color: Colors.grey.shade300,
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Icon(
+                          Icons.person,
+                          size: 60,
+                          color: Colors.grey.shade300,   
+                        ),
+                      ),
+                    ),
+                  ),
             Text(
               FirebaseAuth.instance.currentUser!.displayName!,
               style: const TextStyle(
